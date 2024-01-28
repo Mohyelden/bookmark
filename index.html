@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Pacifico&family=Poppins:wght@100;200;300;400;500;700;800&family=Roboto:wght@100;300;400;500;700&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body  >
+    <div onclick="closeerrormessage()" id="layer" class="layer d-none"></div>
+
+    <div class="crud">
+        <div class="container">
+          <div class="header">
+            <div class="inerheader">
+            <h1 class="text-center">
+                Bookmarker
+            </h1>
+        </div>
+          </div>
+
+<div class="move">
+    <h2 class="text-center p-2" >  <i class="fa-solid fa-bookmark mx-1"></i>Bookmark your  <span>favorite sites<i class="fa-solid fa-bookmark mx-1"></i></span></h2>
+ 
+</div>        
+       <div class="my-3">
+        <label for="sitename"><i class="fa-solid fa-book-bookmark"></i>  Site Name</label>
+        <input oninput="validationsitename()" class="form-control my-2 " type="text" id="sitename" placeholder="Bookmark Name">
+       </div>
+        <div class="my-3">
+            <label for="siteurl"><i class="fa-solid fa-link"></i> Site URL</label>
+        <input oninput="validationsiteurl()" class="form-control my-2" type="text" id="siteurl" placeholder="Website Url">
+        </div>
+        <div class="btnb">
+            <button onclick="addwebsite()" class="btn1">Submit</button>
+
+
+        </div>
+         <table class="table text-center my-3">
+   <tr>
+    <th>Index</th>
+    <th>Website Name</th>
+    <th>Visit</th>
+    <th>Delete</th>
+   </tr>
+   <tbody id="tableBody">
+
+   </tbody>
+         </table>
+        </div>
+        
+    </div>
+    <div id="closebtn" class="errormessage bg-white d-none">
+       <div class="container">
+        <ul class="list-unstyled d-flex justify-content-between align-items-center">
+            <div class="d-flex ">
+                <li><div class="cir1"></div></li>
+            <li><div class="cir2"></div></li>
+            <li><div class="cir3"></div></li>
+            </div>
+            <div >
+                <button onclick="closeerrormessage()"  ><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </ul>
+        <h3>Site Name or Url is not valid, Please follow the <br> rules below :
+
+        </h3>
+        <ul class="list-unstyled arow ">
+            <li class="py-1"><i class="fa-solid fa-arrow-right"></i> Site name must contain at least 3 characters</li>
+            <li class="py-1"><i class="fa-solid fa-arrow-right"></i> Site URL must be a valid one</li>
+        </ul>
+       </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
